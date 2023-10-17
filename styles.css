@@ -10,6 +10,7 @@ body {
   font-family: 'Poppins', sans-serif !important;
 }
 
+/* HEADER */
 header {
   padding-bottom: 100px;
 }
@@ -21,7 +22,8 @@ header {
 .header-container {
   max-width: 1235px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+  padding: 0 30px;
   padding-top: 10px;
 }
 
@@ -49,7 +51,7 @@ header {
 }
 
 .menu-list>li>a:hover {
-  color: #F55253 !important
+  color: #F55253 !important;
 }
 
 .search-bar {
@@ -75,6 +77,7 @@ header {
   outline: none;
   font-weight: 500;
   color: #232323;
+  font-family: 'Poppins';
 }
 
 .search-bar-flex>i {
@@ -114,6 +117,9 @@ header {
   margin-left: 5px;
 }
 
+.la-bars {
+  display: none !important;
+}
 
 /* HEADER CONTENT */
 
@@ -187,7 +193,7 @@ header {
 
 /* HEADER IMG */
 
-.card-1 {
+.header-card-1 {
   position: relative;
   padding: 0 40px;
   max-width: fit-content;
@@ -268,7 +274,7 @@ header {
   z-index: -10;
 }
 
-.card-2 {
+.header-card-2 {
   display: flex;
   height: max-content;
   align-items: center;
@@ -278,7 +284,7 @@ header {
   box-shadow: 0px 40px 70px -10px rgba(0, 0, 0, 0.09);
 }
 
-.card-2>i {
+.header-card-2>i {
   font-size: 35px;
   color: #03A66B;
 }
@@ -333,7 +339,8 @@ header {
 }
 
 .cards {
-  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -363,7 +370,6 @@ header {
   width: 102%;
   opacity: 0;
 }
-
 
 .card:hover::after {
   transform: rotateZ(-4deg);
@@ -400,15 +406,16 @@ header {
   margin: auto;
 }
 
-
+/* FEATURES SECTION 1*/
 .features-section-1 {
   padding-top: 109px;
+  padding-bottom: 100px;
 }
 
 .features-1-container {
   display: flex;
-  max-width: 1440px;
-  padding: 31px 136px 88px 136px;
+  max-width: 1235px;
+  padding: 0 20px;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
@@ -543,10 +550,12 @@ header {
   margin-top: 50px;
 }
 
+/* FEATURES SECTION 2 */
 .features-2-container {
   display: flex;
-  max-width: 1440px;
-  padding: 0px 161px 38.21px 160px;
+  max-width: 1235px;
+  width: 100%;
+  padding: 0 30px;
   justify-content: center;
   align-items: flex-end;
   gap: 100px;
@@ -642,6 +651,7 @@ header {
   line-height: 16px;
 }
 
+/* CTA SECTION */
 .cta-section {
   margin-top: 100px;
   background: #FEF5F5;
@@ -716,7 +726,7 @@ header {
   font-size: 43px;
 }
 
-
+/* FOOTER */
 footer {
   margin-top: 55px;
 }
@@ -809,4 +819,147 @@ footer {
   line-height: 24px;
   text-decoration: none;
   margin-left: 25px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:1150px) {
+  .cards {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+}
+
+@media (max-width:1140px) {
+  .header-content {
+    padding-top: 60px;
+    display: block;
+  }
+
+  .header-img {
+    display: none;
+  }
+
+  .presentation {
+    max-width: none;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .footer-1-content {
+    width: 100%;
+  }
+
+  .footer-1-content>p {
+    width: fit-content;
+  }
+
+  .footer-1-container {
+    padding-top: 0;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+@media(max-width:1100px) {
+
+  .features-1-container {
+    display: block;
+  }
+
+  .features-2-container {
+    padding: 15px;
+  }
+
+  .feature-1-img-card {
+    display: none;
+  }
+
+  .feature-2-img {
+    display: none;
+  }
+
+  .our-services-section {
+    padding: 15px;
+  }
+
+}
+
+@media(max-width:1000px) {
+  .cta-container {
+    display: block;
+    padding: 15px;
+    padding-top: 60px;
+  }
+
+  .cta-img {
+    display: none;
+  }
+
+  .cta-content {
+    max-width: none;
+  }
+}
+
+
+@media (max-width:840px) {
+
+  .menu-list,
+  .search-bar-flex {
+    display: none;
+  }
+
+  .la-shopping-bag {
+    padding: 0;
+    border: none;
+  }
+
+  .la-bars {
+    display: block !important;
+  }
+
+}
+
+
+@media (max-width:700px) {
+  .header-container {
+    padding: 15px;
+  }
+
+  .presentation>h1 {
+    font-size: 54px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+
+  .footer-2-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .footer-2-container>div>a {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width:430px) {
+  .presentation-buttons {
+    flex-wrap: wrap;
+  }
+
+  .cta-buttons {
+    flex-wrap: wrap;
+  }
 }
